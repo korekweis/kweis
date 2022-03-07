@@ -31,13 +31,14 @@
  `
 //  LinkR means React Router 
  export const NavLogo = styled(LinkR)`
-    color: red; 
+    color: white; 
     justify-self: flex-start; 
     cursor: pointer; 
+    flex: 1;
     font-size: 1.5 rem;
     display: flex;
     align-items: center; 
-    margin-left: 24px; 
+    margin-left: 15px; 
     font-weight: bold; 
     text-decoration: none;
  `
@@ -45,7 +46,7 @@
  export const MobileIcon = styled.div`
     display: none; 
 
-    @media screen and (max-width: 768px) { 
+    @media screen and (max-width: 800px) { 
         display: block; 
         position: absolute; 
         top: 0; 
@@ -60,11 +61,12 @@
 
  export const NavMenu = styled.ul`
     display: flex; 
+    flex: 2;
     align-items: center; 
     text-align: center;
     list-style: center; 
-    margin-right: -22px;
-    @media screen and (max-width: 768px) { 
+    // margin-right: -22px;
+    @media screen and (max-width: 800px) { 
         display: none;
     }
  `
@@ -86,4 +88,9 @@
         border-bottom: 3px solid #01bf71;
     }
  `
+
+ export const TempNav = styled.div`
+    display: flex;
+    flex: 1; 
+ ` 
 

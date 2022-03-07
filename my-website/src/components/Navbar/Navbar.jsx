@@ -6,10 +6,11 @@ import { Nav,
         MobileIcon, 
         NavMenu, 
         NavItem,  
-        NavLinks
+        NavLinks, 
+        TempNav
     } from './NavbarElements';
 
-function Navbar() {
+function Navbar({ mobileNavToggle }) {
   return (
     <>
         <Nav>
@@ -17,14 +18,24 @@ function Navbar() {
                 <NavLogo to='/'>
                     Kweis
                 </NavLogo>
-                <MobileIcon>
+                <MobileIcon onClick={ mobileNavToggle }>
                     <FaBars/>
                 </MobileIcon>
                 <NavMenu>
                     <NavItem>
                         <NavLinks to="about">About</NavLinks>
                     </NavItem>
+                    <NavItem>
+                        <NavLinks to="resume">Resume</NavLinks>
+                    </NavItem>
+                    <NavItem>
+                        <NavLinks to="projects">Projects</NavLinks>
+                    </NavItem>
+                    <NavItem>
+                        <NavLinks to="contactMe">Contact Me</NavLinks>
+                    </NavItem>
                 </NavMenu>
+                <TempNav></TempNav>
             </NavbarContainer>
         </Nav>
     </>
